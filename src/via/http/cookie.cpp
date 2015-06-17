@@ -44,7 +44,7 @@ namespace via
       {
         if (expires_ == time_point::max())
         {
-          auto utime = time_from_string(value, "%a, %d-%b-%Y %T");
+          auto utime = time_from_string(value, "%a, %d-%b-%Y %T %Z");
           if (utime == -1)
             return false;
 

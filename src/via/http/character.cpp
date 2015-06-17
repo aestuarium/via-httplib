@@ -161,7 +161,7 @@ namespace via
       if (!strptime(s.c_str(), fmt.c_str(), &timeinfo))
         return std::time_t(-1);
 
-      return timelocal(&timeinfo);
+      return std::mktime(&timeinfo);
     }
 
     std::string time_to_string(const std::time_t& t, const std::string& fmt)
